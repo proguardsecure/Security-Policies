@@ -1,0 +1,59 @@
+## Advanced Security Policies
+
+### documentation/policies/incident_classification.md
+```markdown
+# Security Incident Classification Matrix
+
+**Document ID:** SGP-POL-005
+**Version:** 2.1
+**Effective Date:** August 2025
+**Owner:** Marcus Rodriguez
+**Approver:** Alexandra Chen
+
+## Classification Levels
+
+### CRITICAL (P1)
+- **Response Time:** 15 minutes
+- **Notification:** CISO, SOC Manager, On-call Engineer
+- **Examples:**
+  - Active data breach in progress
+  - Ransomware deployment detected
+  - Critical system compromise (Domain Controller, Certificate Authority)
+  - APT activity confirmed
+
+### HIGH (P2)
+- **Response Time:** 1 hour
+- **Notification:** SOC Manager, Assigned Analyst
+- **Examples:**
+  - Malware detection on multiple endpoints
+  - Unauthorized access to sensitive systems
+  - DDoS attack affecting services
+  - Data exfiltration attempt
+
+### MEDIUM (P3)
+- **Response Time:** 4 hours
+- **Notification:** Assigned Analyst, Team Lead
+- **Examples:**
+  - Single endpoint malware infection
+  - Failed privilege escalation attempt
+  - Suspicious network traffic
+  - Policy violation detection
+
+### LOW (P4)
+- **Response Time:** 24 hours
+- **Notification:** Assigned Analyst
+- **Examples:**
+  - Spam/phishing email detected
+  - Minor policy violations
+  - Informational security alerts
+  - Routine vulnerability scans
+
+## Escalation Matrix
+
+| Time Elapsed | Action Required |
+|--------------|----------------|
+| 30 minutes | Update ticket with initial findings |
+| 2 hours | Notify team lead if P1/P2 |
+| 4 hours | Management notification for P1 |
+| 8 hours | Executive briefing for unresolved P1 |
+| 24 hours | Post-incident review scheduling |
